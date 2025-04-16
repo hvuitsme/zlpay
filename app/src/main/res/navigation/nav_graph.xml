@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.hvuitsme.zlpay.HomeFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/action_home_to_orderPaymentFragment"
+            app:destination="@id/orderPaymentFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/orderPaymentFragment"
+        android:name="com.hvuitsme.zlpay.OrderPaymentFragment"
+        android:label="Order Payment">
+        <argument
+            android:name="quantity"
+            app:argType="string"/>
+        <argument
+            android:name="total"
+            app:argType="float"/>
+        <action
+            android:id="@+id/action_orderPaymentFragment_to_paymentNotificationFragment"
+            app:destination="@id/paymentNotificationFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/paymentNotificationFragment"
+        android:name="com.hvuitsme.zlpay.PaymentNotificationFragment"
+        android:label="Payment Notification">
+        <argument
+            android:name="result"
+            app:argType="string"/>
+    </fragment>
+</navigation>
