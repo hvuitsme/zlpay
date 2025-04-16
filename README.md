@@ -51,5 +51,5 @@ Ensure that you have also included the necessary permissions in the AndroidManif
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/zlpay-demo.git
+   git clone https://github.com/yourusername/zlpay.git
    cd zlpay-demo
